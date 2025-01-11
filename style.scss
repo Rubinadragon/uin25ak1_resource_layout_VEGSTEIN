@@ -2,8 +2,9 @@
 
 $BGColor: #E1E5EE;
 $secondaryColor: #2A324B;
-$sinkColor: #58699D;
+$linkColor: #58699D;
 $white: #ffffff;
+$black: #000000;
 $font: "Montserrat", serif;
 
 *{
@@ -13,21 +14,55 @@ $font: "Montserrat", serif;
 body{
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
     background-color: $BGColor;
     font-family: $font;
+    padding: 10%;
+    
     main{
         background-color: $white;
+        h2{
+            color: $secondaryColor;
+        }
+        article{
+            padding: 4rem;
+            a{
+                color: $linkColor;
+            }
+        }
     }
 }
 
-ul{
+#tabs{
     list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0px;
+    padding: 0;
     li{
+        padding: 1rem 4rem;
+        margin: 1rem 0 0 0;
+    }
+    #activeTab{
         background-color: $white;
+        .tablink{
+            color: $secondaryColor;
+        }
+    }
+    .tab{
+        background-color: $secondaryColor;
+        .tablink{
+            color: $white;
+        }
     }
     .tablink{
         border: none;
         background-color: transparent;
-        font-family: $font
+        font-family: $font;
+        font-weight: bold;
     }
+    
 }

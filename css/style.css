@@ -6,21 +6,53 @@
 body {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: column;
   background-color: #E1E5EE;
   font-family: "Montserrat", serif;
+  padding: 10%;
 }
 body main {
   background-color: #ffffff;
 }
-
-ul {
-  list-style-type: none;
+body main h2 {
+  color: #2A324B;
 }
-ul li {
+body main article {
+  padding: 4rem;
+}
+body main article a {
+  color: #58699D;
+}
+
+#tabs {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 0px;
+  padding: 0;
+}
+#tabs li {
+  padding: 1rem 4rem;
+  margin: 1rem 0 0 0;
+}
+#tabs #activeTab {
   background-color: #ffffff;
 }
-ul .tablink {
+#tabs #activeTab .tablink {
+  color: #2A324B;
+}
+#tabs .tab {
+  background-color: #2A324B;
+}
+#tabs .tab .tablink {
+  color: #ffffff;
+}
+#tabs .tablink {
   border: none;
   background-color: transparent;
   font-family: "Montserrat", serif;
+  font-weight: bold;
 }/*# sourceMappingURL=style.css.map */
