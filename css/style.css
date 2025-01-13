@@ -12,20 +12,22 @@ body {
   font-family: "Montserrat", serif;
   padding: 10%;
 }
-body main {
+
+main {
   background-color: #ffffff;
 }
-body main h2 {
+main h2 {
   color: #2A324B;
 }
-body main article {
+main article {
   padding: 4rem;
 }
-body main article a {
+main article a {
   color: #58699D;
 }
 
 #tabs {
+  overflow: hidden;
   list-style-type: none;
   display: flex;
   flex-direction: row;
@@ -34,25 +36,22 @@ body main article a {
   margin: 0px;
   padding: 0;
 }
-#tabs li {
-  padding: 1rem 4rem;
-  margin: 1rem 0 0 0;
-}
-#tabs #activeTab {
-  background-color: #ffffff;
-}
-#tabs #activeTab .tablink {
-  color: #2A324B;
-}
-#tabs .tab {
-  background-color: #2A324B;
-}
-#tabs .tab .tablink {
-  color: #ffffff;
-}
-#tabs .tablink {
+#tabs button {
   border: none;
-  background-color: transparent;
+  background-color: #2A324B;
   font-family: "Montserrat", serif;
   font-weight: bold;
+  color: #ffffff;
+  padding: 1rem 4rem;
+  margin: 1rem 0 0 0;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #58699D;
+}
+
+button.active {
+  background-color: #ffffff;
+  color: #000000;
 }/*# sourceMappingURL=style.css.map */

@@ -19,8 +19,8 @@ body{
     background-color: $BGColor;
     font-family: $font;
     padding: 10%;
-    
-    main{
+}
+main{
         background-color: $white;
         h2{
             color: $secondaryColor;
@@ -32,9 +32,9 @@ body{
             }
         }
     }
-}
 
 #tabs{
+    overflow: hidden;
     list-style-type: none;
     display: flex;
     flex-direction: row;
@@ -42,27 +42,23 @@ body{
     flex-wrap: wrap;
     margin: 0px;
     padding: 0;
-    li{
-        padding: 1rem 4rem;
-        margin: 1rem 0 0 0;
-    }
-    #activeTab{
-        background-color: $white;
-        .tablink{
-            color: $secondaryColor;
-        }
-    }
-    .tab{
-        background-color: $secondaryColor;
-        .tablink{
-            color: $white;
-        }
-    }
-    .tablink{
+ 
+    button{
         border: none;
-        background-color: transparent;
+        background-color: $secondaryColor;
         font-family: $font;
         font-weight: bold;
+        color: $white;
+        padding: 1rem 4rem;
+        margin: 1rem 0 0 0;
+        cursor: pointer;
     }
     
 }
+button:hover{
+        background-color: $linkColor;
+    }  
+button.active{
+        background-color: $white;
+        color: $black;
+    }
