@@ -42,7 +42,13 @@ main{
     flex-wrap: wrap;
     margin: 0px;
     padding: 0;
- 
+ button:hover{
+        background-color: $linkColor;
+    }  
+button:active{
+        background-color: $white;
+        color: $black;
+    }
     button{
         border: none;
         background-color: $secondaryColor;
@@ -55,10 +61,3 @@ main{
     }
     
 }
-button:hover{
-        background-color: $linkColor;
-    }  
-button.active{
-        background-color: $white;
-        color: $black;
-    }

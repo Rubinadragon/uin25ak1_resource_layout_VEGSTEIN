@@ -36,6 +36,13 @@ main article a {
   margin: 0px;
   padding: 0;
 }
+#tabs button:hover {
+  background-color: #58699D;
+}
+#tabs button:active {
+  background-color: #ffffff;
+  color: #000000;
+}
 #tabs button {
   border: none;
   background-color: #2A324B;
@@ -45,13 +52,4 @@ main article a {
   padding: 1rem 4rem;
   margin: 1rem 0 0 0;
   cursor: pointer;
-}
-
-button:hover {
-  background-color: #58699D;
-}
-
-button.active {
-  background-color: #ffffff;
-  color: #000000;
 }/*# sourceMappingURL=style.css.map */
