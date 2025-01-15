@@ -2,6 +2,7 @@
 //https://www.w3schools.com/howto/howto_js_tabs.asp
 //https://stackoverflow.com/questions/10510063/javascript-object-reference-linked-to-object-in-array
 //https://www.w3schools.com/howto/howto_js_active_element.asp
+//https://stackoverflow.com/questions/56719276/using-javascript-functions-to-add-dynamic-html-content
 
 const tabcontainer = document.getElementById("tabs")
 /*const html = document.getElementById("HTMLtab")
