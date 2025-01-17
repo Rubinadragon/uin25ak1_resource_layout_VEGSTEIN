@@ -50,24 +50,28 @@ resources.map((resource, index) => resourceHTML +=
         ${listElement}
     </ul>`
 )
-console.log(listElement)
+//console.log(listElement)
 
-    //console.log(resourceHTML)
+//console.log(resourceHTML)
 
 //Bytte faner
 for(let teller = 0; teller < btn.length; teller++){
     btn[teller].addEventListener("click", function(){
-            resourceHTML = ""
-            //Filtrere info
-            
+        //Bytte farge på aktiv fane
+        let activeTab = document.getElementsByClassName("active")
+        activeTab[0].className = activeTab[0].className.replace(" active", "")
+        this.className += " active"
 
-            resources.map((resource, index) => resourceHTML +=
-            `<h2>${resources[index].category}</h2>
-                <p>${resources[index].text}</p>
-                <ul>
-                </ul>`
+        resourceHTML = ""
+        //Filtrere info
+        //Generere i forskjellige artikler?
+        resources.map((resource, index) => resourceHTML +=
+        `<h2>${resources[index].category}</h2>
+            <p>${resources[index].text}</p>
+            <ul>
+            </ul>`
         )
-        console.log(btn[teller])
+        //console.log(btn[teller])
         document.getElementById("article").innerHTML = resourceHTML
     })
 }
@@ -80,4 +84,3 @@ document.getElementById("JStab").innerHTML = headerHTML[2]
 document.getElementById("reacttab").innerHTML = headerHTML[3]
 document.getElementById("sanitytab").innerHTML = headerHTML[4]
 document.getElementById("article").innerHTML = resourceHTML
-
