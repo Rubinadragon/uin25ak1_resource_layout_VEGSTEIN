@@ -5,7 +5,8 @@
 //https://stackoverflow.com/questions/32141291/javascript-reflection-get-nested-objects-path
 //https://stackoverflow.com/questions/34398279/map-and-filter-an-array-at-the-same-time
 //https://stackoverflow.com/questions/48707227/how-to-filter-a-javascript-map
-//https://stackoverflow.com/questions/54723528/how-to-create-tabs-in-javascript
+//https://stackoverflow.com/questions/70894999/using-map-and-filter-at-the-same-time-in-javascript
+//https://stackoverflow.com/questions/71499080/use-filter-on-an-array-for-a-specific-index
 
 const html = document.getElementById("HTMLtab")
 const css = document.getElementById("CSStab")
@@ -34,44 +35,53 @@ let resourceHTML = ""
 
 //lagre <li>
 let listElement = ""
-//console.log(sources)
-//Generere dynamisk mengde <li>
-/*sources.map((source, index) => listElement +=
-`<li>
-    <a href="#">${resources[index].sources[index]}</a>
-</li>`)*/
 
+//Generere dynamisk mengde <li>
+resources.filter((source, index) => index === 0).map((resource) => 
+    resource.sources.map((source) => {listElement += 
+    `<li>
+        <a href="${source.url}">${source.title}</a>
+    </li>`
+}))
 
 //Startfane
-resources.map((resource, index) => resourceHTML +=
+resources.filter((resource, index) => index === 0).map((resource, index) => resourceHTML +=
 `<h2>${resources[index].category}</h2>
     <p>${resources[index].text}</p>
     <ul>
         ${listElement}
     </ul>`
 )
-//console.log(listElement)
-
-//console.log(resourceHTML)
 
 //Bytte faner
 for(let teller = 0; teller < btn.length; teller++){
     btn[teller].addEventListener("click", function(){
         //Bytte farge på aktiv fane
+        //Tre linjer under basert på denne koden: https://www.w3schools.com/howto/howto_js_active_element.asp
         let activeTab = document.getElementsByClassName("active")
         activeTab[0].className = activeTab[0].className.replace(" active", "")
         this.className += " active"
 
-        resourceHTML = ""
+        let listElement = ""
+
+        resources.filter((source, index) => index === teller).map((resource) => 
+            resource.sources.map((source) => {listElement += 
+            `<li>
+                <a href="${source.url}">${source.title}</a>
+            </li>`
+        }))
+
         //Filtrere info
-        //Generere i forskjellige artikler?
-        resources.map((resource, index) => resourceHTML +=
-        `<h2>${resources[index].category}</h2>
-            <p>${resources[index].text}</p>
+        resources.filter((resource, index) => index === teller).map((resource, index) => resourceHTML =
+        `<h2>${resources[teller].category}</h2>
+            <p>${resources[teller].text}</p>
             <ul>
+                ${listElement}
             </ul>`
         )
-        //console.log(btn[teller])
+
+        //resourceHTML = ""
+        //console.log(teller)
         document.getElementById("article").innerHTML = resourceHTML
     })
 }
