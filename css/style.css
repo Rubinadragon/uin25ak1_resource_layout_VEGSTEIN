@@ -30,14 +30,9 @@ main article a {
   overflow: hidden;
   list-style-type: none;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
   flex-wrap: wrap;
   margin: 0px;
   padding: 0;
-}
-#tabs button:hover {
-  background-color: #58699D;
 }
 #tabs button {
   border: none;
@@ -45,11 +40,41 @@ main article a {
   font-family: "Montserrat", serif;
   font-weight: bold;
   color: #ffffff;
-  padding: 1rem 4rem;
-  margin: 1rem 0 0 0;
-  cursor: pointer;
 }
 #tabs .active {
   background-color: #ffffff;
   color: #000000;
+}
+
+@media only screen and (max-width: 482px) {
+  #tabs {
+    flex-direction: column;
+    gap: 0.5rem;
+    flex-grow: 2;
+  }
+  button {
+    padding: 1rem 2rem;
+    flex-grow: 2;
+  }
+  nav {
+    display: flex;
+    justify-content: center;
+  }
+  li {
+    display: flex;
+  }
+}
+@media only screen and (min-width: 483px) {
+  #tabs {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  button:hover {
+    background-color: #58699D;
+  }
+  button {
+    padding: 1rem 4rem;
+    margin: 1rem 0 0 0;
+    cursor: pointer;
+  }
 }/*# sourceMappingURL=style.css.map */
