@@ -1,13 +1,3 @@
-//https://www.w3schools.com/howto/howto_js_tabs.asp
-//https://stackoverflow.com/questions/10510063/javascript-object-reference-linked-to-object-in-array
-//https://www.w3schools.com/howto/howto_js_active_element.asp
-//https://stackoverflow.com/questions/72348956/how-to-map-through-a-deeply-nested-array-of-objects
-//https://stackoverflow.com/questions/32141291/javascript-reflection-get-nested-objects-path
-//https://stackoverflow.com/questions/34398279/map-and-filter-an-array-at-the-same-time
-//https://stackoverflow.com/questions/48707227/how-to-filter-a-javascript-map
-//https://stackoverflow.com/questions/70894999/using-map-and-filter-at-the-same-time-in-javascript
-//https://stackoverflow.com/questions/71499080/use-filter-on-an-array-for-a-specific-index
-
 const html = document.getElementById("HTMLtab")
 const css = document.getElementById("CSStab")
 const js = document.getElementById("JStab")
@@ -15,14 +5,6 @@ const react = document.getElementById("reacttab")
 const sanity = document.getElementById("sanitytab")
 const header = document.getElementById("tabs")
 const btn = header.getElementsByClassName("tab")
-
-//console.log(btn)
-
-/*html.addEventListener("click", switchTab)
-css.addEventListener("click", switchTab)
-js.addEventListener("click", switchTab)
-react.addEventListener("click", switchTab)
-sanity.addEventListener("click", switchTab)*/
 
 //Headerprint
 headerHTML = []
@@ -37,6 +19,7 @@ let resourceHTML = ""
 let listElement = ""
 
 //Generere dynamisk mengde <li>
+//Alle instanser av map og filter-kombo basert på første forslag fra denne siden: //https://stackoverflow.com/questions/70894999/using-map-and-filter-at-the-same-time-in-javascript
 resources.filter((source, index) => index === 0).map((resource) => 
     resource.sources.map((source) => {listElement += 
     `<li>
@@ -57,7 +40,7 @@ resources.filter((resource, index) => index === 0).map((resource, index) => reso
 for(let teller = 0; teller < btn.length; teller++){
     btn[teller].addEventListener("click", function(){
         //Bytte farge på aktiv fane
-        //Tre linjer under basert på denne koden: https://www.w3schools.com/howto/howto_js_active_element.asp
+        //Tre linjer under og for-løkken sammen med btn basert på denne koden: https://www.w3schools.com/howto/howto_js_active_element.asp
         let activeTab = document.getElementsByClassName("active")
         activeTab[0].className = activeTab[0].className.replace(" active", "")
         this.className += " active"
@@ -79,14 +62,9 @@ for(let teller = 0; teller < btn.length; teller++){
                 ${listElement}
             </ul>`
         )
-
-        //resourceHTML = ""
-        //console.log(teller)
         document.getElementById("article").innerHTML = resourceHTML
     })
 }
-
-
 
 document.getElementById("HTMLtab").innerHTML = headerHTML[0]
 document.getElementById("CSStab").innerHTML = headerHTML[1]
