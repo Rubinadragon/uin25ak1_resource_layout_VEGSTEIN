@@ -1,18 +1,18 @@
-const html = document.getElementById("HTMLtab")
-const css = document.getElementById("CSStab")
-const js = document.getElementById("JStab")
-const react = document.getElementById("reacttab")
-const sanity = document.getElementById("sanitytab")
+//https://stackoverflow.com/questions/44062723/mapping-an-object-and-then-setting-innerhtml-on-the-page-results-in-commas-betwe
 const header = document.getElementById("tabs")
 const btn = header.getElementsByClassName("tab")
 
 //Headerprint
-headerHTML = []
+//Studentassistent foreslo å bytte ut individuelle getElementById med map
+let headerHTML = []
+resources.map((header)=>{
+    headerHTML += header.category
+})
 
 //Pushe headerelementer fra ressurser inn i resourceHTML
-resources.forEach((object, index) => {
+/*resources.forEach((object, index) => {
     headerHTML.push(object.category)
-})
+})*/
 let resourceHTML = ""
 
 //lagre <li>
@@ -64,11 +64,7 @@ for(let teller = 0; teller < btn.length; teller++){
         )
         document.getElementById("article").innerHTML = resourceHTML
     })
+    btn.innerHTML = headerHTML[teller]
 }
 
-document.getElementById("HTMLtab").innerHTML = headerHTML[0]
-document.getElementById("CSStab").innerHTML = headerHTML[1]
-document.getElementById("JStab").innerHTML = headerHTML[2]
-document.getElementById("reacttab").innerHTML = headerHTML[3]
-document.getElementById("sanitytab").innerHTML = headerHTML[4]
 document.getElementById("article").innerHTML = resourceHTML
