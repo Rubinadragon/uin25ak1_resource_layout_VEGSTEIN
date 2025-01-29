@@ -16,8 +16,9 @@ let listElement = ""
 //Generere dynamisk mengde <li>
 //Alle instanser av map og filter-kombo basert på første forslag fra denne siden: 
 //https://stackoverflow.com/questions/70894999/using-map-and-filter-at-the-same-time-in-javascript
-/*I tillegg gikk noe hjelp fra chatGPT med syntaksen, det jeg endte med å bruke derfra var å flytte source inni map og legge til krøllparenteser etter arrowfunksjonen til map. 
-Lenken til chatten er en ny chat, men opprinnelig ble det skrevet inn i en eldre chat fra tidligere semestere.
+/*I tillegg gikk noe hjelp fra chatGPT med syntaksen, det jeg endte med å bruke derfra var å flytte source inni map og legge til krøllparenteser etter arrowfunksjonen til map. */
+
+/*Lenken til chatten er en ny chat, men opprinnelig ble det skrevet inn i en eldre chat fra tidligere semestere.
 Så da kopierte jeg inn det jeg hadde skrevet inn i den forrige chatten i den nye, for at det jeg skrev i andre oppgaver ikke skulle bli blandet med det jeg skrev i denne.
 Lenke til chatten her: https://chatgpt.com/share/679a61c0-d324-8006-87ad-2e89a2878115
 // Den gamle chatten er her, men jeg har ikke tatt i bruk noe annet enn det jeg nevnte tidligere, selv om jeg også har spurt den om flere ting senere:
