@@ -20,7 +20,8 @@ let listElement = ""
 Lenken til chatten er en ny chat, men opprinnelig ble det skrevet inn i en eldre chat fra tidligere semestere,
 så da kopierte jeg inn det jeg hadde skrevet inn i den forrige chatten i den nye, for at det jeg skrev i andre oppgaver ikke skulle bli blandet med det jeg skrev i denne.
 Lenke til chatten her: https://chatgpt.com/share/679a61c0-d324-8006-87ad-2e89a2878115
-// Den gamle chatten er her, men jeg har ikke tatt i bruk noe annet enn det jeg nevnte tidligere: https://chatgpt.com/c/6707a71d-adb0-8006-8e83-aa4342ab7df7*/
+// Den gamle chatten er her, men jeg har ikke tatt i bruk noe annet enn det jeg nevnte tidligere, selv om jeg også har spurt den om flere ting senere:
+//  https://chatgpt.com/c/6707a71d-adb0-8006-8e83-aa4342ab7df7*/
 resources.filter((source, index) => index === 0).map((resource) => 
     resource.sources.map((source) => {listElement += 
     `<li>
